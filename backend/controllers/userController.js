@@ -14,7 +14,7 @@ const authUser = asyncHandler(async (req, res) => {
       expiresIn: '30d',
     })
 
-    // Set JWT as HTTP-Only cookie
+    // Set JWT as HTTP-Only cookie 
     res.cookie('jwt', token, {
       httpOnly: true,
       secure: process.env.NODE_ENV !== 'development',
